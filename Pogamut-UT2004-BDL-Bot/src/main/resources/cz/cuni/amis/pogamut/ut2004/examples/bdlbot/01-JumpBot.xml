@@ -1,0 +1,16 @@
+<!-- LBDC: 5   -->
+<body>
+	<point>
+		<switch>
+			<cnd>
+				<cnd>players.canSeePlayers()</cnd>
+			</cnd>
+			<then>
+				<action>move.jump()</action>
+			</then>
+			<else>
+				<action>move.turnHorizontal(30)</action>
+			</else>
+		</switch>
+	</point>
+</body>

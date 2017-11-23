@@ -1,0 +1,42 @@
+<!-- LBDC: 12 -->
+<body>
+	<point>
+		<guard>
+			<cnd>
+				<cnd>!players.canSeePlayers()</cnd>
+			</cnd>
+			<child>
+				<action>shoot.stopShooting()</action>
+			</child>
+		</guard>
+	</point>
+	<point>
+		<switch>
+			<cnd>
+				<cnd>players.canSeePlayers()</cnd>
+			</cnd>
+			<then>
+				<body>
+					<point>
+						<action>shoot.shoot(players.getNearestVisiblePlayer())</action>
+					</point>
+					<point>
+						<action>navigation.navigate(players.getNearestVisiblePlayer())
+						</action>
+					</point>
+				</body>
+			</then>
+			<else>
+				<guard>
+					<cnd>
+						<cnd>!navigation.isNavigating()</cnd>
+					</cnd>
+					<child>
+						<action>navigation.navigate(navPoints.getRandomNavPoint())
+						</action>
+					</child>
+				</guard>
+			</else>
+		</switch>
+	</point>
+</body>

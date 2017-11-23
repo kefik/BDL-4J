@@ -1,0 +1,27 @@
+<!-- LBDC: 8 (+1, for terminable action) -->
+<switch>
+	<cnd>
+		<cnd>players.canSeePlayers()</cnd>
+	</cnd>
+	<then>
+		<body>
+			<point>
+				<!-- Example of terminable action, the expression after "|" is used for both SWITCH out and TERMINATE -->
+				<action>shoot.shoot(players.getNearestVisiblePlayer())|shoot.stopShooting()</action>
+			</point>
+			<point>
+				<action>navigation.navigate(players.getNearestVisiblePlayer())</action>
+			</point>
+		</body>
+	</then>
+	<else>
+		<guard>
+			<cnd>
+				<cnd>!navigation.isNavigating()</cnd>
+			</cnd>
+			<child>
+				<action>navigation.navigate(navPoints.getRandomNavPoint())</action>
+			</child>
+		</guard>
+	</else>
+</switch>

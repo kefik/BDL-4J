@@ -1,0 +1,13 @@
+<body>
+  <p1>
+    <switch>
+      <cnd><cnd>players.canSeeAnyPlayer()</cnd></cnd>
+      <then>
+        <action>move.jump()</action>
+      </then>
+      <else>
+        <action>move.turnHorizontaly(30)</action>
+      </else>
+    </switch>
+  </p1>
+</body>

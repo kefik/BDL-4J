@@ -1,0 +1,37 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>cz.cuni.amis</groupId>
+		<artifactId>amis-pom</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<groupId>cz.gemrot.phd</groupId>
+	<artifactId>xtree-bdl-xml</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>xtree-bdl-xml</name>
+	
+	<dependencies>
+		<!--
+			xTREE DEPENDENCIES 
+         -->        
+        <dependency>
+            <groupId>cz.gemrot.phd</groupId>
+            <artifactId>xtree-bdl</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+                
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>amis-artifactory</id>
+			<name>AMIS Artifactory</name>
+			<url>http://diana.ms.mff.cuni.cz:8081/artifactory/repo</url>
+		</repository>
+	</repositories>
+</project>
